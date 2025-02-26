@@ -1,98 +1,130 @@
 @font-face {
-    font-family: 'offbit';
-    src: url(OffBitTrial-Dot.ttf) format(truetype);
+    font-family: jet-brains;
+    src: url('JetBrainsMono-VariableFont_wght.ttf') ;
 }
-@font-face {
-    font-family: 'powerdisplay';
-    src: url(PowerDisplayTrial-Condensed.ttf) format(truetype);
-}
-@font-face {
-    font-family: 'mondwest';
-    src: url(PPMondwest-Regular.otf);
-}
-@font-face {
-    font-family: 'neubit';
-    src: url(PPNeueBit-Bold.otf);
-}
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* font-family: 'mondwest'; */
-    background-color: #222;
-    color: #eee;
+* {
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: jet-brains;
+}
+
+body {
+    background-image: url('pexels-kadirakman-9624529.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: left;
 }
 
 .container {
-    background-color: #333;
-    border-radius: 12px;
-    padding: 30px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center; 
-    width: 90%; 
+    width: 100%;
     max-width: 800px;
-}
-/* #info{
+    padding: 20px;
     text-align: center;
-    font-size: 2rem;
-} */
-h1 {
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 5rem;
 }
 
-input[type="text"] {
-    padding: 12px 15px;
+h1 {
+    color: #4a8db7;
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Override the default h1 with our custom title */
+h1.app-title {
+    font-size: 60px;
+    color: #3279a5;
+    text-align: center;
+    background-image: url('icon\ _cloudy_.png');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 500px;
+}
+
+#city-input {
+    width: 300px;
+    padding: 15px 20px;
+    font-size: 18px;
     border: none;
-    border-radius: 6px;
-    margin-bottom: 20px;
-    width: 70%;
-    background-color: #444;
-    color: #eee;
-    font-size: 1rem;
+    border-radius: 25px;
+    background-color: rgba(240, 240, 240, 0.7);
+    margin-right: 10px;
     outline: none;
 }
 
-input[type="text"]::placeholder {
-    color: #bbb;
-}
-
-button {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: #fff;
+#get-weather {
+    padding: 15px 20px;
+    font-size: 18px;
+    background-image: url('Rectangle\ 4.png');
+    background-size: cover;
+    background-position: center;
+    color: black;
     border: none;
-    border-radius: 6px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 1rem;
-    /* align-items: center; */
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+#get-weather:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #info {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #444;
-    border-radius: 8px;
-    text-align: center;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    min-width: 400px;
 }
 
 #info p {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    line-height: 0.6;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#city-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a8db7;
+}
+
+#temperature {
+    font-size: 36px;
     font-weight: bold;
 }
 
-#info p strong {
-    color: #fff;
+.hidden {
+    display: none;
+}
+
+/* Make it responsive */
+@media (max-width: 600px) {
+    h1.app-title {
+        font-size: 28px;
+        margin-bottom: 100px;
+    }
+    
+    #city-input {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    
+    #get-weather {
+        width: 100%;
+    }
+    
+    #info {
+        min-width: 100%;
+    }
 }
